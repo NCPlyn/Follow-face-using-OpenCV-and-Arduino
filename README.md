@@ -50,5 +50,11 @@ You can enter config file after it and skip all of that like this: `followface.p
 
 To exit, just press 'q'.
 
+### BotControl.exe
+
+This app works only on Windows and you need to have .NET framework installed (https://dotnet.microsoft.com/download/dotnet-framework) (it can also work on linux using Wine, idunno)
+
+Start the app, select port, click connect and now you can control the Arduino using your arrows.
+
 ## Pictures/Videos
 *tobedone*
