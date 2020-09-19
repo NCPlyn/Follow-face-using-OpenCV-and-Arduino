@@ -1,5 +1,5 @@
 # Follow face using OpenCV, Arduino and Webcam
-Python script (and Arduino sketch) to follow face using OpenCV Haar Cascades, 28BYJ-48 stepper & servo and Webcam.
+Python script (and Arduino sketch) to follow face using OpenCV, 28BYJ-48 stepper & servo and Webcam.
 
 This script + arduino with stepper motor as yaw rotation and servo motor as pitch for the webcam, will basically follow any visible face.
 There are two versions, one using haar cascades (slow & not that good) and other one using Deep Neural Network & SSD (faster & more precise).
@@ -58,3 +58,12 @@ Start the app, select port, click connect and now you can control the Arduino us
 
 ## Pictures/Videos
 *tobedone*
+
+## Credits & Copyright
+
+DNN is code from https://github.com/sr6033/face-detection-with-OpenCV-and-DNN that I modified.
+Haar code is done by me using references.
+Arduino code is done by me.
+BotControl is done by me.
+
+Everyone is allowed to use this code & modify it / publish it modified. If you do so, credit would be cool! :D
