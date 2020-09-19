@@ -2,7 +2,7 @@
 #include <Servo.h>
 Stepper myStepper = Stepper(2038, 8, 10, 9, 11);
 Servo myservo;
-int pos = 45;
+int pos = 1100;
 String str1;
 String str2;
 String incStr;
@@ -31,14 +31,14 @@ void loop() {
     str2 = incStr.substring(2, 3);
 
     if(str2 == "1") {
-      if(pos < 92) {
-        pos -= 1;
-        myservo.write(pos);
+      if(pos < 1750 && pos > 550) {
+        pos -= 8;
+        myservo.writeMicroseconds(pos);
       }
     } else if (str2 == "2") {
-      if(pos < 90) {
-        pos += 1;
-        myservo.write(pos);
+      if(pos < 1700 && pos > 500) {
+        pos += 8;
+        myservo.writeMicroseconds(pos);
       }
     }
 
@@ -49,10 +49,8 @@ void loop() {
       myStepper.step(-10);
       sleepStepper();
     }
-
     incStr="";
   }
-  
 }
 
 void sleepStepper() {
