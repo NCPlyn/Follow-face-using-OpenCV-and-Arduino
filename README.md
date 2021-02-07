@@ -2,12 +2,12 @@
 Python script (and Arduino sketch) to follow face using OpenCV, 28BYJ-48 stepper & servo and Webcam.
 
 This script + arduino with stepper motor as yaw rotation and servo motor as pitch for the webcam, will basically follow any visible face.
-There are two versions, one using haar cascades (slow & not that good) and other one using Deep Neural Network & SSD (faster & more precise).
+There are two versions, one using haar cascades (faster but bad detection) and other one using Deep Neural Network & SSD (slower but precise).
 
 ## Prerequirements
 
 ## Windows
-For windows install Python 3 and add it to your PATH. Next install pip3 and opencv-python, pyserial and imutils.
+For windows install Python 3 and add it to your PATH. Next install pip3 and opencv-python, pyserial, imutils and numpy.
 
 ## Ubuntu
 Run these commands to install dependencies
@@ -15,7 +15,7 @@ Run these commands to install dependencies
 ```bash
 apt install python3 python3-pip
 
-pip3 install opencv-python pyserial imutils
+pip3 install opencv-python pyserial imutils numpy
 ```
 
 For Arduino IDE, all libraires used are already in IDE. (Servo.h & Stepper.h)
@@ -48,6 +48,8 @@ Now you can start the python script using `followface.py` on Windows or `python3
 
 You can enter config file after it and skip all of that like this: `followface.py example.txt` or `python3 followface.py example.txt` on linux.
 
+In the DNN version, you can press 'e', now the window frame will be updated every 30 frames, increasing the FPS by 2 frames (at least for me)
+
 To exit, just press 'q'.
 
 ### BotControl.exe
@@ -62,7 +64,7 @@ Start the app, select port, click connect and now you can control the Arduino us
 ## Credits & Copyright
 
 DNN is code from https://github.com/sr6033/face-detection-with-OpenCV-and-DNN that I modified.
-Haar code is done by me using references.
+Haar code is done by me using references and tutorials.
 Arduino code is done by me.
 BotControl is done by me.
 
